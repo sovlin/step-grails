@@ -1,10 +1,10 @@
 #!/bin/sh
 if [ $WERCKER_GRAILS_VERSION ]
 then
-    if [ $WERCKER_GRAILS_VERSION -eq "2.4.4" ]
+    if [ $WERCKER_GRAILS_VERSION -eq $(echo "2.4.4") ]
     then
       GRAILS_HOME=/lib/grails-$WERCKER_GRAILS_VERSION
-    elif [ $WERCKER_GRAILS_VERSION -eq "3.0.0.M1" ]
+    elif [ $WERCKER_GRAILS_VERSION -eq $(echo "3.0.0.M1") ]
     then
       GRAILS_HOME=/lib/grails-$WERCKER_GRAILS_VERSION
     else
