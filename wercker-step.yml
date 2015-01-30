@@ -1,3 +1,6 @@
 name: grails
-version: 0.0.4
+version: 0.0.5
 description: Wercker step for box = sovlin/Grails-Last-Test
+keywords:
+  - Grails 2.4.4
+  - Grails 3.0.0.M1

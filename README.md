@@ -8,6 +8,7 @@ Exemple
     build:
       steps:
         - sovlin/grails:
+            version: "2.4.4"
             options: help
 Display help : similar to command "grails help"
 
