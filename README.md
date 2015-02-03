@@ -13,7 +13,12 @@ Exemple
 Display help : similar to command "grails help"
 
 
-You can make every command after "option: \<your grails command>"
+You can make every command after "option: your grails command"
+
+Choice your version
+
+* version: "2.4.4"
+* version: "3.0.0.M1"
 
 ------------
 Box Link
