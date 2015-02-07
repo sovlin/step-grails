@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 if [ "$WERCKER_GRAILS_COMMIT" != "" ]
 then
  echo "parent -> run.sh" 

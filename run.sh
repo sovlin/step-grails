@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 if [ "$1" ] && [ "$2" ]
 then
   WERCKER_GRAILS_VERSION=$1
