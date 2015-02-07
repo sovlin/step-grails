@@ -25,7 +25,15 @@ then
         * )
             echo "unknown version:$WERCKER_GRAILS_VERSION"
     esac
-    export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+    case "$(uname -s)" in
+        "Darwin" )
+            export JAVA_HOME=$(dirname $(readlink $(which javac)));;
+        "Linux" )
+            export JAVA_HOME=/usr/lib/jvm/java-8-oracle;;
+        * )
+         echo "unknown system: $(uname -s)"
+         exit 0
+    esac
     export PATH="$PATH:$JAVA_HOME/bin"
     export PATH="$PATH:$GRAILS_HOME/bin"
     $GRAILS_HOME/bin/grails $WERCKER_GRAILS_OPTIONS

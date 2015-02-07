@@ -19,6 +19,20 @@ Choice your version
 
 * version: "2.4.4"
 * version: "3.0.0.M1"
+* version: "BUILD-SNAPSHOT"
+
+WARRNING !, for the version "BUILD-SNAPSHOT" the "commit: your num commit" is obligatory.
+
+Exemple
+-----------
+    box: sovlin/Grails-Last-Test
+    build:
+      steps:
+        - sovlin/grails:
+            version: "BUILD-SNAPSHOT"
+            commit: 721dba7b99de0f092a228bf5ca226ffc82ef261f
+            options: compile
+            
 
 ------------
 Box Link
