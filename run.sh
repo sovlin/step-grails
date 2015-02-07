@@ -1,4 +1,14 @@
 #!/bin/sh
+case "$WERCKER_GRAILS_VERSION" in
+    "2.4.4")
+        echo "-> 2.4.4";;
+    "3.0.0.M1")
+        echo "-> 3.0.0.M1";;
+    "3.0.0.M2")
+        echo "-> 3.0.0.M2";;
+    *)
+        echo "-> $WERCKER_GRAILS_VERSION <-"
+esac
 if [ $WERCKER_GRAILS_VERSION ]
 then
     case "$WERCKER_GRAILS_VERSION" in
@@ -7,8 +17,13 @@ then
         "3.0.0.M1" )
             GRAILS_HOME=/lib/grails-$WERCKER_GRAILS_VERSION;;
         "3.0.0.M2" )
-            echo "MD2";;
-        *)
+            if [ $WERCKER_GRAILS_COMMIT ]
+            then
+                source ./grails-snapshot-run.sh
+            else
+                echo "commit:<not set>"
+            fi;;
+        * )
             echo "unknown version:$WERCKER_GRAILS_VERSION"
     esac
     export JAVA_HOME=/usr/lib/jvm/java-8-oracle
