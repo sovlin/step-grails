@@ -3,13 +3,12 @@ if [ "$WERCKER_GRAILS_COMMIT" != "" ]
 then
  echo "parent -> run.sh" 
 else
- WERCKER_GRAILS_COMMIT=721dba7b99de0f092a228bf5ca226ffc82ef261f
+ WERCKER_GRAILS_COMMIT=f711ff27fdedf7e41c54fef79f5ffc9ea57bfcfa
 fi
 mkdir target
 cd target
 echo "--- GIT CLONE & INSTALL GRAILS $(pwd) ---"
-# git clone https://github.com/grails/grails-core.git ./
-git clone https://github.com/sovlin/grails-core.git ./
+git clone $WERCKER_GRAILS_DEPOGIT ./
 echo "--- CHANGE COMMIT $WERCKER_GRAILS_COMMIT ---"
 # mv ./grails-core/* ./
 # rm -r ./grails-core

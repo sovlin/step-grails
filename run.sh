@@ -6,6 +6,12 @@ then
   if [ "$3" ]
   then
     WERCKER_GRAILS_COMMIT=$3
+    if [ "$4" ]
+    then
+      WERCKER_GRAILS_DEPOGIT=$4
+    else
+      WERCKER_GRAILS_DEPOGIT="https://github.com/grails/grails-core.git"
+    fi
   fi
 fi
 if [ "$WERCKER_GRAILS_VERSION" ]
@@ -27,7 +33,7 @@ then
     esac
     case "$(uname -s)" in
         "Darwin" )
-            export JAVA_HOME=$(dirname $(readlink $(which javac)));;
+            ;;# export JAVA_HOME=$(dirname $(readlink $(which javac)));;
         "Linux" )
             export JAVA_HOME=/usr/lib/jvm/java-8-oracle;;
         * )

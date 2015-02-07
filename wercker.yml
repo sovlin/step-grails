@@ -19,6 +19,14 @@ build:
          ./run.sh "3.0.0.M1" "compile"
          ./run.sh "3.0.0.M1" "war"
     - script:
-        name: Init BUILD-SNAPSHOT
+        name: Init BUILD-SNAPSHOT (Official depo)
         code: |
-         ./run.sh "BUILD-SNAPSHOT" "compile" "721dba7b99de0f092a228bf5ca226ffc82ef261f"
+         ./run.sh "BUILD-SNAPSHOT" "compile" "f711ff27fdedf7e41c54fef79f5ffc9ea57bfcfa"
+         ls
+         rm -r ./target
+    - script:
+        name: Init BUILD-SNAPSHOT (Sovlin depo)
+        code: |
+         ./run.sh "BUILD-SNAPSHOT" "compile" "721dba7b99de0f092a228bf5ca226ffc82ef261f" "https://github.com/sovlin/grails-core.git"
+         ls
+         rm -r ./target
