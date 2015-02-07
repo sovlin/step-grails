@@ -18,3 +18,4 @@ git checkout $WERCKER_GRAILS_COMMIT
 ./gradlew install
 GRAILS_HOME=$(pwd)"/bin"
 echo "GRAILS_HOME=$GRAILS_HOME"
+cd ..
