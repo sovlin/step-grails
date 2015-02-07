@@ -6,6 +6,8 @@ build:
         code: |
          WERCKER_GRAILS_VERSION="3.0.0.M1"
          WERCKER_GRAILS_OPTIONS=create-app test
+         echo $(pwd)
+         ls
          ./run.sh
     - script:
         name: Change folder
