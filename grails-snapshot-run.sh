@@ -16,6 +16,6 @@ echo "--- CHANGE COMMIT $WERCKER_GRAILS_COMMIT ---"
 git show $WERCKER_GRAILS_COMMIT
 git checkout $WERCKER_GRAILS_COMMIT
 ./gradlew install
-GRAILS_HOME=$(pwd)"/bin"
+GRAILS_HOME=$(pwd)
 echo "GRAILS_HOME=$GRAILS_HOME"
 cd ..
