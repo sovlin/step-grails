@@ -6,7 +6,7 @@ then
             GRAILS_HOME=/lib/grails-$WERCKER_GRAILS_VERSION;;
         "3.0.0.M1" )
             GRAILS_HOME=/lib/grails-$WERCKER_GRAILS_VERSION;;
-        "3.0.0.BUILD-SNAPSHOT" )
+        "3.0.0.M2" )
             if [ $WERCKER_GRAILS_COMMIT ]
             then
                 source ./grails-snapshot-run.sh
