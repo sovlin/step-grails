@@ -10,9 +10,15 @@ cd targetGrails
 echo "--- GIT CLONE & INSTALL GRAILS $(pwd) ---"
 git clone $WERCKER_GRAILS_DEPOGIT ./
 echo "--- CHANGE COMMIT $WERCKER_GRAILS_COMMIT ---"
-git show $WERCKER_GRAILS_COMMIT
-git checkout $WERCKER_GRAILS_COMMIT
-./gradlew install
-GRAILS_HOME=$(pwd)
-echo "GRAILS_HOME=$GRAILS_HOME"
-cd ..
+if git cat-file -e $WERCKER_GRAILS_COMMIT 2> /dev/null
+then 
+  echo exists
+  git checkout $WERCKER_GRAILS_COMMIT
+  ./gradlew install
+  GRAILS_HOME=$(pwd)
+  echo "GRAILS_HOME=$GRAILS_HOME"
+  cd ..
+else 
+  echo "Missing commit $WERCKER_GRAILS_COMMIT"
+  exit 1
+fi
