@@ -30,9 +30,22 @@ Exemple
       steps:
         - sovlin/grails:
             version: "BUILD-SNAPSHOT"
-            commit: 721dba7b99de0f092a228bf5ca226ffc82ef261f
+            commit: f711ff27fdedf7e41c54fef79f5ffc9ea57bfcfa
             options: compile
-            
+
+By default, the official depot is use https://github.com/grails/grails-core
+You can use yours own repository for example :
+
+Exemple
+-----------
+    box: sovlin/Grails-Last-Test
+    build:
+      steps:
+        - sovlin/grails:
+            version: "BUILD-SNAPSHOT"
+            commit: 721dba7b99de0f092a228bf5ca226ffc82ef261f
+            depogit: "https://github.com/sovlin/grails-core.git"
+            options: compile
 
 ------------
 Box Link

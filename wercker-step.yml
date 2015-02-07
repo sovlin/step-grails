@@ -1,6 +1,9 @@
 name: grails
 version: 0.0.9
-description: Wercker step for box = sovlin/Grails-Last-Test
+description: |
+ Wercker step for box = sovlin/Grails-Last-Test
+ With BUILD-SNAPSHOT make with github repository
 keywords:
   - Grails 2.4.4
   - Grails 3.0.0.M1
+  - Grails BUILD-SNAPSHOT
