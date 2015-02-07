@@ -7,7 +7,7 @@ build:
     - script:
         name: Change folder
         code: |
-         mv ./test ./
+         mv ./test/* ./
          rm ./test
          ls
     - sovlin/grails:
@@ -18,4 +18,4 @@ build:
         options: war
     - sovlin/grails:
         version: "3.0.0.BUILD-SNAPSHOT"
-        options: war
+        options: compile
