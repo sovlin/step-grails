@@ -7,10 +7,9 @@ build:
     - script:
         name: Change folder
         code: |
+         mv ./test ./
+         rm ./test
          ls
-         cd ./test
-         ls
-         pwd
     - sovlin/grails:
         version: "3.0.0.M1"
         options: compile
