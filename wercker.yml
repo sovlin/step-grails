@@ -18,4 +18,5 @@ build:
         options: war
     - sovlin/grails:
         version: "3.0.0.BUILD-SNAPSHOT"
+        commit: 721dba7b99de0f092a228bf5ca226ffc82ef261f
         options: compile
