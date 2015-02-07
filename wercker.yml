@@ -6,7 +6,11 @@ build:
         options: create-app test
     - script:
         name: Change folder
-        code: cd ./test
+        code: |
+         ls
+         cd ./test
+         ls
+         pwd
     - sovlin/grails:
         version: "3.0.0.M1"
         options: compile
