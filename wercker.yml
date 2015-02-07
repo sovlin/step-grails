@@ -4,11 +4,9 @@ build:
     - script:
         name: Init 3.0.0.M1
         code: |
-         WERCKER_GRAILS_VERSION="3.0.0.M1"
-         WERCKER_GRAILS_OPTIONS=create-app test
          echo $(pwd)
          ls
-         ./run.sh
+         ./run.sh "3.0.0.M1" "create-app test"
     - script:
         name: Change folder
         code: |
@@ -18,14 +16,9 @@ build:
     - script:
         name: Compile War 3.0.0.M1
         code: |
-         WERCKER_GRAILS_OPTIONS=compile
-         ./run.sh
-         WERCKER_GRAILS_OPTIONS=war
-         ./run.sh
+         ./run.sh "3.0.0.M1" "compile"
+         ./run.sh "3.0.0.M1" "war"
     - script:
         name: Init BUILD-SNAPSHOT
         code: |
-         WERCKER_GRAILS_VERSION="BUILD-SNAPSHOT"
-         WERCKER_GRAILS_OPTIONS=compile
-         WERCKER_GRAILS_COMMIT=721dba7b99de0f092a228bf5ca226ffc82ef261f
-         ./run.sh
+         ./run.sh "BUILD-SNAPSHOT" "compile" "721dba7b99de0f092a228bf5ca226ffc82ef261f"

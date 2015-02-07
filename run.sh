@@ -1,14 +1,13 @@
 #!/bin/sh
-case "$WERCKER_GRAILS_VERSION" in
-    "2.4.4")
-        echo "-> 2.4.4";;
-    "3.0.0.M1")
-        echo "-> 3.0.0.M1";;
-    "BUILD-SNAPSHOT")
-        echo "-> BUILD-SNAPSHOT";;
-    *)
-        echo "-> $WERCKER_GRAILS_VERSION <-"
-esac
+if [ $1 ] && [ $2 ]
+then 
+  WERCKER_GRAILS_VERSION=$1
+  WERCKER_GRAILS_OPTIONS=$2
+  if [ $3 ]
+  then
+    WERCKER_GRAILS_COMMIT=$3
+  fi
+fi
 if [ $WERCKER_GRAILS_VERSION ]
 then
     case "$WERCKER_GRAILS_VERSION" in
