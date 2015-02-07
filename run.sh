@@ -36,6 +36,7 @@ then
     esac
     export PATH="$PATH:$JAVA_HOME/bin"
     export PATH="$PATH:$GRAILS_HOME/bin"
+    echo "--- RUN WITH GRAILS $WERCKER_GRAILS_VERSION ----"
     $GRAILS_HOME/bin/grails $WERCKER_GRAILS_OPTIONS
 else
     echo "version:<not set>"
