@@ -11,7 +11,7 @@ build:
         name: Change folder
         code: |
          mv ./test/* ./
-         rm -r ./test
+         rm -rf ./test
          ls -al
     - script:
         name: Compile War 3.0.0.M1
@@ -24,10 +24,10 @@ build:
         code: |
          ./run.sh "BUILD-SNAPSHOT" "compile" "f711ff27fdedf7e41c54fef79f5ffc9ea57bfcfa"
          ls -al
-         rm -r ./targetGrails
+         rm -rf ./targetGrails
     - script:
         name: Init BUILD-SNAPSHOT (Sovlin depo)
         code: |
          ./run.sh "BUILD-SNAPSHOT" "compile" "721dba7b99de0f092a228bf5ca226ffc82ef261f" "https://github.com/sovlin/grails-core.git"
          ls -al
-         rm -r ./targetGrails
+         rm -rf ./targetGrails
