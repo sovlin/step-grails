@@ -5,8 +5,8 @@ then
 else
  WERCKER_GRAILS_COMMIT=f711ff27fdedf7e41c54fef79f5ffc9ea57bfcfa
 fi
-mkdir targetGrails
-cd targetGrails
+mkdir .target-grails-snapshot
+cd .target-grails-snapshot
 echo "--- GIT CLONE & INSTALL GRAILS $(pwd) ---"
 git clone $WERCKER_GRAILS_DEPOGIT ./
 echo "--- CHANGE COMMIT $WERCKER_GRAILS_COMMIT ---"

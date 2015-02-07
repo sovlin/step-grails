@@ -1,6 +1,6 @@
 /out/*
 /target/*
-/targetGrails/*
+/.target-grails-snapshot/*
 /.idea/*
 /.h2/*
 /*.iml
