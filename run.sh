@@ -4,8 +4,8 @@ case "$WERCKER_GRAILS_VERSION" in
         echo "-> 2.4.4";;
     "3.0.0.M1")
         echo "-> 3.0.0.M1";;
-    "3.0.0.M2")
-        echo "-> 3.0.0.M2";;
+    "BUILD-SNAPSHOT")
+        echo "-> BUILD-SNAPSHOT";;
     *)
         echo "-> $WERCKER_GRAILS_VERSION <-"
 esac
@@ -16,7 +16,7 @@ then
             GRAILS_HOME=/lib/grails-$WERCKER_GRAILS_VERSION;;
         "3.0.0.M1" )
             GRAILS_HOME=/lib/grails-$WERCKER_GRAILS_VERSION;;
-        "3.0.0.M2" )
+        "BUILD-SNAPSHOT" )
             if [ $WERCKER_GRAILS_COMMIT ]
             then
                 source ./grails-snapshot-run.sh

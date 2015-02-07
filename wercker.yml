@@ -1,22 +1,28 @@
 box: sovlin/Grails-Last-Test
 build:
   steps:
-    - sovlin/grails:
-        version: "3.0.0.M1"
-        options: create-app test
+    - script:
+        name: Init 3.0.0.M1
+        code: |
+         WERCKER_GRAILS_VERSION="3.0.0.M1"
+         WERCKER_GRAILS_OPTIONS=create-app test
+         ./run.sh
     - script:
         name: Change folder
         code: |
          mv ./test/* ./
          rm -r ./test
          ls
-    - sovlin/grails:
-        version: "3.0.0.M1"
-        options: compile
-    - sovlin/grails:
-        version: "3.0.0.M1"
-        options: war
-    - sovlin/grails:
-        version: "3.0.0.M2"
-        commit: 721dba7b99de0f092a228bf5ca226ffc82ef261f
-        options: compile
+    - script:
+        name: Compile War 3.0.0.M1
+        code: |
+         WERCKER_GRAILS_OPTIONS=compile
+         ./run.sh
+         WERCKER_GRAILS_OPTIONS=war
+    - script:
+        name: Init BUILD-SNAPSHOT
+        code: |
+         WERCKER_GRAILS_VERSION="BUILD-SNAPSHOT"
+         WERCKER_GRAILS_OPTIONS=compile
+         WERCKER_GRAILS_COMMIT=721dba7b99de0f092a228bf5ca226ffc82ef261f
+         ./run.sh
