@@ -16,3 +16,6 @@ build:
     - sovlin/grails:
         version: "3.0.0.M1"
         options: war
+    - sovlin/grails:
+        version: "3.0.0.BUILD-SNAPSHOT"
+        options: war
