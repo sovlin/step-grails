@@ -12,7 +12,7 @@ git clone $WERCKER_GRAILS_DEPOGIT ./
 echo "--- CHANGE COMMIT $WERCKER_GRAILS_COMMIT ---"
 if git cat-file -e $WERCKER_GRAILS_COMMIT 2> /dev/null
 then 
-  echo exists
+  echo "Commit $WERCKER_GRAILS_COMMIT exists !"
   git checkout $WERCKER_GRAILS_COMMIT
   ./gradlew install
   GRAILS_HOME=$(pwd)
