@@ -19,6 +19,7 @@ build:
          WERCKER_GRAILS_OPTIONS=compile
          ./run.sh
          WERCKER_GRAILS_OPTIONS=war
+         ./run.sh
     - script:
         name: Init BUILD-SNAPSHOT
         code: |
