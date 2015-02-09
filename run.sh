@@ -6,7 +6,7 @@ then
   if [ "$3" ]
   then
     WERCKER_GRAILS_COMMIT=$3
-    if [ "$4" ]
+    if [ "$4" != "" ]
     then
       WERCKER_GRAILS_DEPOGIT=$4
     else
