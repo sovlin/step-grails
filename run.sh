@@ -27,7 +27,7 @@ then
                 mkdir .target-grails-snapshot
                 cd .target-grails-snapshot
                 echo "--- GIT CLONE & INSTALL GRAILS $(pwd) ---"
-                git clone $WERCKER_GRAILS_DEPOGIT ./
+                git clone $WERCKER_GRAILS_DEPOGIT .
                 echo "--- CHANGE COMMIT $WERCKER_GRAILS_COMMIT ---"
                 if git cat-file -e $WERCKER_GRAILS_COMMIT 2> /dev/null
                 then
