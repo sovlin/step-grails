@@ -33,8 +33,8 @@ Exemple
             commit: f711ff27fdedf7e41c54fef79f5ffc9ea57bfcfa
             options: compile
 
-By default, the official depot is use https://github.com/grails/grails-core
-You can use yours own repository for example :
+By default, the official depot used https://github.com/grails/grails-core
+You can use your own repository for example :
 
 Exemple
 -----------
