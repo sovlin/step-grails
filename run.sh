@@ -3,16 +3,16 @@ if [ "$1" ] && [ "$2" ]
 then
   WERCKER_GRAILS_VERSION=$1
   WERCKER_GRAILS_OPTIONS=$2
-  if [ "$3" ]
-  then
-    WERCKER_GRAILS_COMMIT=$3
-    if [ "$4" != "" ]
-    then
-      WERCKER_GRAILS_DEPOGIT=$4
-    else
-      WERCKER_GRAILS_DEPOGIT="https://github.com/grails/grails-core.git"
-    fi
-  fi
+fi
+if [ "$3" ]
+then
+WERCKER_GRAILS_COMMIT=$3
+fi
+if [ "$4" ]
+then
+  WERCKER_GRAILS_DEPOGIT=$4
+else
+  WERCKER_GRAILS_DEPOGIT="https://github.com/grails/grails-core.git"
 fi
 if [ "$WERCKER_GRAILS_VERSION" ]
 then
