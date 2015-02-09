@@ -1,5 +1,5 @@
 name: grails
-version: 0.0.11-4
+version: 0.0.11-5
 description: |
  Wercker step for box = sovlin/Grails-Last-Test
  With BUILD-SNAPSHOT make with github repository
