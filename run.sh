@@ -33,7 +33,7 @@ then
                 then
                   echo "Commit $WERCKER_GRAILS_COMMIT exists !"
                   git checkout $WERCKER_GRAILS_COMMIT
-                  ./gradlew install
+                  ./gradlew install -q
                   GRAILS_HOME=$(pwd)
                   echo "GRAILS_HOME=$GRAILS_HOME"
                   cd ..
